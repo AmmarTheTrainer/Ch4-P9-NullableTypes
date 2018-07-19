@@ -69,7 +69,10 @@ namespace Ch4_P9_NullableTypes
 
             //// If the value from GetIntFromDatabase() is null,
             //// assign local variable to 100.
-            //int myData = dr.GetIntFromDatabase() ?? 100;
+
+            ////int myData = dr.GetIntFromDatabase() ?? 100;
+            //int myData = dr.GetIntFromDatabase() ?? 2;
+
             //Console.WriteLine("Value of myData: {0}", myData);
 
             #endregion
@@ -80,7 +83,13 @@ namespace Ch4_P9_NullableTypes
             //TesterMethodforObjects(null);
             //TesterMethodforTypes(null);
 
+            // var? number = 4;
 
+            //var name = "cr";
+            //name = null;
+
+            //var? no = 3;
+            //no = null;
 
             #endregion
 
@@ -101,23 +110,23 @@ namespace Ch4_P9_NullableTypes
         }
         static void TesterMethod(string[] args)
         {
-            //// We should check for null before accessing the array data!
-            //if (args != null)
-            //{
-            //    Console.WriteLine($"You sent me {args.Length} arguments.");
-            //}
+            // We should check for null before accessing the array data!
+            if (args != null)
+            {
+                Console.WriteLine($"You sent me {args.Length} arguments.");
+            }
 
-                Console.WriteLine($"You sent me {args?.Length} arguments.");
+            Console.WriteLine($"You sent me {args?.Length} arguments.");
         }
 
         private static void LocalNullableVariablesUsingNullable()
         {
-            // Define some local nullable types using Nullable<T>.
-            Nullable<int> nullableInt = 10;
-            Nullable<double> nullableDouble = 3.14;
-            Nullable<bool> nullableBool = null;
-            Nullable<char> nullableChar = 'a';
-            Nullable<int>[] arrayOfNullableInts = new Nullable<int>[10];
+            //// Define some local nullable types using Nullable<T>.
+            //Nullable<int> nullableInt = 10;
+            //Nullable<double> nullableDouble = 3.14;
+            //Nullable<bool> nullableBool = null;
+            //Nullable<char> nullableChar = 'a';
+            //Nullable<int>[] arrayOfNullableInts = new Nullable<int>[10];
         }
 
         private static void LocalNullableVariables()
@@ -127,6 +136,7 @@ namespace Ch4_P9_NullableTypes
             double? nullableDouble = 3.14;
             bool? nullableBool = null;
             char? nullableChar = 'a';
+
             int?[] arrayOfNullableInts = new int?[10];
             
             // Error! Strings are reference types!
