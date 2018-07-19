@@ -78,7 +78,8 @@ namespace Ch4_P9_NullableTypes
 
             //TesterMethod(null);
             //TesterMethodforObjects(null);
-            TesterMethodforTypes(null);
+            //TesterMethodforTypes(null);
+
 
 
             #endregion
@@ -92,7 +93,6 @@ namespace Ch4_P9_NullableTypes
         {
             //Console.WriteLine($"You sent me {s?.Value} arguments.");
             Console.WriteLine($"You sent me {list?.Count} arguments.");
-
         }
         static void TesterMethodforObjects(string s)
         {
